@@ -1,5 +1,5 @@
 const moment = require('moment');
-const mockData = require('./');
+const mockData = require('./data');
 
 const email_domain_list = mockData.email_domain_list;
 const name_list = mockData.name_list;
