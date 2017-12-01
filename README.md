@@ -16,5 +16,5 @@ This util provide basic functionality to mock basic entity
   dataMockUtil.getRandomFromRange(min, max)
   dataMockUtil.getRandomPhoneNumber()
   dataMockUtil.getRandomZipCode()
-  dataMockUtil.getRandomDateObject(dayDelta, hourDelta)1
+  dataMockUtil.getRandomDateObject(dayDelta, hourDelta)
 ```
