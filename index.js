@@ -92,7 +92,7 @@ const getLicensePlate = function getLicensePlate(max){
         }
 
     }
-    return resp;
+    return resp.toUpperCase();
 }
 
 const getLetter = function getLetter(){
