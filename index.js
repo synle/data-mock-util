@@ -50,11 +50,11 @@ const getDateObject = function getDateObject(dayDelta, hourDelta){
 }
 
 
-const getNameWord = function getNameWord(list) {
+const getNameWord = function getNameWord() {
     return getItem(name_list);
 }
 
-const getPersonFullName = function getPersonFullName(list) {
+const getPersonFullName = function getPersonFullName() {
     const firstName = getNameWord(name_list);
     const lastName = getNameWord(name_list);
 
@@ -62,7 +62,7 @@ const getPersonFullName = function getPersonFullName(list) {
 }
 
 
-const getCity = function getCity(list) {
+const getCity = function getCity() {
     return getItem(city_list);
 }
 
