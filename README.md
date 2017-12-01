@@ -9,12 +9,19 @@ This util provide basic functionality to mock basic entity
 
 ## Use
 ```
+  // include
   const dataMockUtil = require('data-mock-util');
   
-  dataMockUtil.getRandomItem(list)
-  dataMockUtil.getRandomPosInteger(max)
-  dataMockUtil.getRandomFromRange(min, max)
-  dataMockUtil.getRandomPhoneNumber()
-  dataMockUtil.getRandomZipCode()
-  dataMockUtil.getRandomDateObject(dayDelta, hourDelta)
+  
+  // to use
+  mockDataUtil.getItem(list)
+  mockDataUtil.getPositiveInteger(max)
+  mockDataUtil.getInteger(min, max)
+  mockDataUtil.getPhoneNumber()
+  mockDataUtil.getZipCode()
+  mockDataUtil.getDateObject(dayDelta, hourDelta)
+  mockDataUtil.getNameWord(list)
+  mockDataUtil.getPersonFullName(list)
+  mockDataUtil.getCity(list)
+  mockDataUtil.getEmail()
 ```
