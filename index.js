@@ -22,7 +22,7 @@ const getInteger = function getInteger(min, max) {
 const getPhoneNumber = function getPhoneNumber(){
     let resp = '';
     for (let i = 0; i < 10; i++){
-        resp += getInteger(0,9)
+        resp += getDigit()
     }
     return resp;
 }
@@ -30,7 +30,7 @@ const getPhoneNumber = function getPhoneNumber(){
 const getZipCode = function getZipCode(){
     let resp = '';
     for (let i = 0; i < 5; i++){
-        resp += getInteger(0,9)
+        resp += getDigit()
     }
     return resp;
 }
@@ -76,6 +76,35 @@ const getEmail = function getEmail(){
 }
 
 
+
+const getBoolean = function getBoolean(max) {
+    return getInteger(1, max) % 2 === 0;
+}
+
+
+const getLicensePlate = function getLicensePlate(max) {
+    let resp = '';
+    for (let i = 0; i < 7; i++){
+        if(getBoolean() === true){
+            resp += getDigit();
+        } else {
+            resp += getLetter();
+        }
+
+    }
+    return resp;
+}
+
+const getLetter = function getLetter(){
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    return getItem(alphabet);
+}
+
+const getDigit = function getDigit(){
+    return getInteger(0,9);
+}
+
+
 module.exports = {
     getItem,
     getPositiveInteger,
@@ -87,4 +116,7 @@ module.exports = {
     getPersonFullName,
     getCity,
     getEmail,
+    getBoolean,
+    getLetter,
+    getDigit,
 }
