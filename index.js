@@ -36,17 +36,22 @@ const getZipCode = function getZipCode(){
 }
 
 
-const getDateObject = function getDateObject(dayDelta, hourDelta){
+const getDateObject = function getDateObject(dayDelta, hourDelta, inThePast){
     hourDelta = hourDelta || 24;
     dayDelta = dayDelta || 30;
 
-    const diffDay = getPositiveInteger(dayDelta);
-    const diffHour = getPositiveInteger(hourDelta)
+    let diffDay = getPositiveInteger(dayDelta);
+    let diffHour = getPositiveInteger(hourDelta)
+    
+    if(inThePast === true){
+        diffDay *= -1;
+        diffHour *= -1;
+    }
 
     return moment()
         .startOf('day')
-        .add(dayDelta, 'day')
-        .add(hourDelta, 'hour')
+        .add(diffDay, 'day')
+        .add(diffHour, 'hour')
         .valueOf();
 }
 
