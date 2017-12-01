@@ -1,41 +1,41 @@
 const moment = require('moment');
 
 // funcs
-const getRandomItem = function getRandomItem(list) {
+const getItem = function getItem(list) {
     return list[Math.floor(Math.random() * (list.length -1))];
 }
 
-const getRandomPosInteger = function getRandomPosInteger(max) {
-    return getRandomFromRange(1, max);
+const getPositiveInteger = function getPositiveInteger(max) {
+    return getInteger(1, max);
 }
 
-const getRandomFromRange = function getRandomFromRange(min, max) {
+const getInteger = function getInteger(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-const getRandomPhoneNumber = function getRandomPhoneNumber(){
+const getPhoneNumber = function getPhoneNumber(){
     let resp = '';
     for (let i = 0; i < 10; i++){
-        resp += getRandomFromRange(0,9)
+        resp += getInteger(0,9)
     }
     return resp;
 }
 
-const getRandomZipCode = function getRandomZipCode(){
+const getZipCode = function getZipCode(){
     let resp = '';
     for (let i = 0; i < 5; i++){
-        resp += getRandomFromRange(0,9)
+        resp += getInteger(0,9)
     }
     return resp;
 }
 
 
-const getRandomDateObject = function getRandomDateObject(dayDelta, hourDelta){
+const getDateObject = function getDateObject(dayDelta, hourDelta){
     hourDelta = hourDelta || 24;
     dayDelta = dayDelta || 30;
 
-    const diffDay = getRandomPosInteger(dayDelta);
-    const diffHour = getRandomPosInteger(hourDelta)
+    const diffDay = getPositiveInteger(dayDelta);
+    const diffHour = getPositiveInteger(hourDelta)
 
     return moment()
         .startOf('day')
@@ -44,10 +44,10 @@ const getRandomDateObject = function getRandomDateObject(dayDelta, hourDelta){
 }
 
 module.exports = {
-    getRandomItem,
-    getRandomPosInteger,
-    getRandomFromRange,
-    getRandomPhoneNumber,
-    getRandomZipCode,
-    getRandomDateObject,
+    getItem,
+    getPositiveInteger,
+    getInteger,
+    getPhoneNumber,
+    getZipCode,
+    getDateObject,
 }
