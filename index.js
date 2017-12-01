@@ -1,4 +1,10 @@
 const moment = require('moment');
+const mockData = require('./');
+
+const email_domain_list = mockData.email_domain_list;
+const name_list = mockData.name_list;
+const city_list = mockData.city_list;
+
 
 // funcs
 const getItem = function getItem(list) {
@@ -43,6 +49,33 @@ const getDateObject = function getDateObject(dayDelta, hourDelta){
         .add(hourDelta, 'hour');
 }
 
+
+const getNameWord = function getNameWord(list) {
+    return getItem(name_list);
+}
+
+const getPersonFullName = function getPersonFullName(list) {
+    const firstName = getNameWord(name_list);
+    const lastName = getNameWord(name_list);
+
+    return firstName + ' ' + lastName;
+}
+
+
+const getCity = function getCity(list) {
+    return getItem(city_list);
+}
+
+
+const getEmail = function getEmail(){
+    const firstName = getNameWord(name_list);
+    const lastName = getNameWord(name_list);
+    const emailDomain = getItem(email_domain_list);
+
+    return (firstName + '.' + lastName + emailDomain).toLowerCase();
+}
+
+
 module.exports = {
     getItem,
     getPositiveInteger,
@@ -50,4 +83,8 @@ module.exports = {
     getPhoneNumber,
     getZipCode,
     getDateObject,
+    getNameWord,
+    getPersonFullName,
+    getCity,
+    getEmail,
 }
