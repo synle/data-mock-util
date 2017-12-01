@@ -119,4 +119,5 @@ module.exports = {
     getBoolean,
     getLetter,
     getDigit,
+    getLicensePlate,
 }
