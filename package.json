@@ -1,0 +1,22 @@
+{
+  "name": "data-mock-util",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synle/data-mock-util.git"
+  },
+  "author": "Sy Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/synle/data-mock-util/issues"
+  },
+  "homepage": "https://github.com/synle/data-mock-util#readme",
+  "dependencies": {
+    "moment": "^2.19.3"
+  }
+}
