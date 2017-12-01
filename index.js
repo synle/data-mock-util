@@ -78,7 +78,7 @@ const getEmail = function getEmail(){
 
 
 const getBoolean = function getBoolean(max){
-    return getInteger(1, max) % 2 === 0;
+    return Math.random() >= 0.5;
 }
 
 
