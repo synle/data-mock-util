@@ -7,15 +7,15 @@ const city_list = mockData.city_list;
 
 
 // funcs
-const getItem = function getItem(list) {
+const getItem = function getItem(list){
     return list[Math.floor(Math.random() * (list.length -1))];
 }
 
-const getPositiveInteger = function getPositiveInteger(max) {
+const getPositiveInteger = function getPositiveInteger(max){
     return getInteger(1, max);
 }
 
-const getInteger = function getInteger(min, max) {
+const getInteger = function getInteger(min, max){
     return Math.floor(Math.random() * (max - min) + min);
 }
 
@@ -50,11 +50,11 @@ const getDateObject = function getDateObject(dayDelta, hourDelta){
 }
 
 
-const getNameWord = function getNameWord() {
+const getNameWord = function getNameWord(){
     return getItem(name_list);
 }
 
-const getPersonFullName = function getPersonFullName() {
+const getPersonFullName = function getPersonFullName(){
     const firstName = getNameWord(name_list);
     const lastName = getNameWord(name_list);
 
@@ -62,7 +62,7 @@ const getPersonFullName = function getPersonFullName() {
 }
 
 
-const getCity = function getCity() {
+const getCity = function getCity(){
     return getItem(city_list);
 }
 
@@ -77,17 +77,17 @@ const getEmail = function getEmail(){
 
 
 
-const getBoolean = function getBoolean(max) {
+const getBoolean = function getBoolean(max){
     return getInteger(1, max) % 2 === 0;
 }
 
 
-const getLicensePlate = function getLicensePlate(max) {
+const getLicensePlate = function getLicensePlate(max){
     let resp = '';
     for (let i = 0; i < 7; i++){
         if(getBoolean() === true){
             resp += getDigit();
-        } else {
+        } else{
             resp += getLetter();
         }
 
