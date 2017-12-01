@@ -46,7 +46,8 @@ const getDateObject = function getDateObject(dayDelta, hourDelta){
     return moment()
         .startOf('day')
         .add(dayDelta, 'day')
-        .add(hourDelta, 'hour');
+        .add(hourDelta, 'hour')
+        .valueOf();
 }
 
 
