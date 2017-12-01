@@ -20,8 +20,8 @@ This util provide basic functionality to mock basic entity
   mockDataUtil.getPhoneNumber()
   mockDataUtil.getZipCode()
   mockDataUtil.getDateObject(dayDelta, hourDelta)
-  mockDataUtil.getNameWord(list)
-  mockDataUtil.getPersonFullName(list)
-  mockDataUtil.getCity(list)
+  mockDataUtil.getNameWord()
+  mockDataUtil.getPersonFullName()
+  mockDataUtil.getCity()
   mockDataUtil.getEmail()
 ```
