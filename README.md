@@ -5,14 +5,16 @@ This util provide basic functionality to mock basic entity
 ## Install
 ```
   npm install --save git+https://github.com/synle/data-mock-util.git
+
+  npm install --save data-mock-util@1.0.0
 ```
 
 ## Use
 ```
   // include
   const dataMockUtil = require('data-mock-util');
-  
-  
+
+
   // to use
   mockDataUtil.getItem(list)
   mockDataUtil.getPositiveInteger(max)
