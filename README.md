@@ -12,7 +12,7 @@ This util provide basic functionality to mock basic entity
 ## Use
 ```
   // include
-  const dataMockUtil = require('data-mock-util');
+  const mockDataUtil = require('data-mock-util');
 
 
   // to use
